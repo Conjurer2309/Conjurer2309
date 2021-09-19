@@ -1,0 +1,42 @@
+package qsp;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class launchfire {
+	public static void main(String[]args) throws InterruptedException
+	{
+		String key = "webdriver.gecko.driver";
+		String value = "./software/geckodriver.exe";
+		System.setProperty(key,value);
+		FirefoxDriver driver = new FirefoxDriver();
+		Thread.sleep(2000);
+		driver.get("https://www.flipkart.com/");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@href='/account/login?ret=/']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@class='_2IX_2- VJZDxU']")).sendKeys("7353962325");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@class='_2IX_2- _3mctLh VJZDxU']")).sendKeys("qltpzb7yfn");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2HKlqd _3AWRsL']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Kurtis");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@class='L0Z3Pu']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//img[@class='_2r_T1I' and @src='https://rukminim1.flixcart.com/image/612/734/kflftzk0-0/kurta/y/7/k/s-4053-lee-moda-original-imafwyr6rsh5v9qj.jpeg?q=50']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@class='cfnctZ']")).sendKeys("560021");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@href='/lee-moda-women-printed-flared-kurta/p/itm85f6fc5f8cee1?pid=KTAFVJ42NWGXZCZY&lid=LSTKTAFVJ42NWGXZCZYEIHOMV&marketplace=FLIPKART&sattr[]=color&sattr[]=size&st=size']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2U9uOA _3v1-ww']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@class='YUhWwv']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@class='exehdJ']")).click();
+	}
+
+}
