@@ -1,0 +1,165 @@
+package attempt1;
+
+import java.util.Scanner;
+public class Bookstore {
+	
+		 void fic()
+		 {
+		  System.out.println();
+		  System.out.println("Fictional Genre");
+		  Scanner t=new Scanner(System.in);
+		  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		  System.out.println("YOU HAVE FOLLOWING CHOICES : ");
+		  System.out.println("3. Eragon by Christopher Poalini");
+		  System.out.println("4. The Girl with the Dragon tattoo by Steig Larson");
+		  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		  System.out.println();
+		  System.out.println("0. Main Menu");
+		  System.out.println("7. Exit");
+		  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		  System.out.print("ENTER YOUR CHOICE : ");
+		  int j=t.nextInt();
+		  switch(j)
+		  {
+		   case 3:
+		     System.out.println();
+		     System.out.println("Thank You for selecting 'The Eragon Series'");
+		     Scanner s1=new Scanner(System.in);
+		     System.out.println();
+		     System.out.print("Enter the book number needed: ");
+		     int l=s1.nextInt();
+		     int eragon=550;
+		     double Total0=l*eragon;
+		     System.out.println("$$$$$$$$$$$$$$$$$$$$");
+		     System.out.println("The total amount is Rs."+Total0);
+		     System.out.println("$$$$$$$$$$$$$$$$$$$$");
+		     System.out.println("Would you like to order anything else?");
+		     fic();
+		     break;
+		   case 4:
+		     System.out.println();
+		     System.out.println("Thank you for selecting 'The Girl with the Dragon Tattoo Series'");
+		     Scanner s2=new Scanner(System.in);
+		     System.out.println();
+		     System.out.print("Enter the book number needed : ");
+		     int m=s2.nextInt();
+		     int dragont=400;
+		     double Total1=1*dragont;
+		     System.out.println("$$$$$$$$$$$$$$$$$$$$");
+		     System.out.println("The total amount is Rs."+Total1);
+		     System.out.println("$$$$$$$$$$$$$$$$$$$$");
+		     System.out.println("Would you like to order anything else?");
+		     fic();
+		     break;
+		   case 0:MainBook.main(null);
+		     break;
+		   case 7:
+		     System.out.println();
+		     System.out.println("Thank you for visiting");
+		     break;
+		   default:
+		     System.out.println();
+		     System.out.println("YOU HAVE ENTERED A WRONG CHOICE");
+		     fic();
+		     break;
+		  }           
+		 
+		}
+
+}
+class NonFic
+{
+ void NonFic()
+ {
+  System.out.println();
+  System.out.println("Non-Fictional Genre");
+  Scanner x=new Scanner(System.in);
+  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  System.out.println("YOU HAVE FOLLOWING CHOICES : ");
+  System.out.println("5. The Secret by Rhonda Byrne");
+  System.out.println("6. The Story of My Experiments with Truth by M K Gandhi");
+  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  System.out.println();
+  System.out.println("0. Main Menu");
+  System.out.println("8. Exit");
+  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  System.out.print("ENTER YOUR CHOICE : ");
+  int k=x.nextInt();
+  switch(k)
+  {
+   case 5:
+     System.out.println();
+     System.out.println("Thank you for selecting 'The Secret'");
+     System.out.println();
+     int secret=250;
+     double Total2=1*secret;
+     System.out.println();
+     System.out.println("The total amount is Rs."+Total2);
+     System.out.println();
+     System.out.println("Would you like to order anything else?");
+     NonFic();
+     break;
+   case 6:System.out.println("Thank you for selecting 'The Story of My Experiments with Truth'");
+     int truth=300;
+     double Total3=1*truth;
+     System.out.println();
+     System.out.println("The total amount is Rs."+Total3);
+     System.out.println();
+     System.out.println("Would you like to order anything else?");
+     NonFic();
+     break;
+   case 0:MainBook.main(null);
+     break;
+   case 8:
+     System.out.println();
+     System.out.println("Thank you for visiting");
+     break;
+   default:
+     System.out.println();
+     System.out.println("YOU HAVE ENTERED A WRONG CHOICE");
+     NonFic();
+     break;
+  }
+ }
+}
+class MainBook 
+{
+ public static void main(String[] args){
+	 System.out.println();
+	  System.out.println("Welcome to Book Paradise");
+	  Scanner s=new Scanner(System.in);
+	  System.out.println();
+	  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	        System.out.println("YOU HAVE FOLLOWING CHOICES : ");
+	        System.out.println("1. Fictional Genre");
+	        System.out.println("2. Non-Fictional Genre");
+	  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	  System.out.println();
+	  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	  System.out.println("9. Exit");
+	  System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	  System.out.println();
+	        System.out.print("ENTER YOUR CHOICE : ");
+	        int i=s.nextInt();
+	 
+ 
+switch(i)
+{
+ case 1:Bookstore B=new Bookstore(); 
+  B.fic();
+  break;
+ case 2:NonFic N=new NonFic(); 
+  N.NonFic();
+  break;
+ case 9:
+  System.out.println();
+  System.out.println("Thank you for visiting");
+  break;
+ default:
+ System.out.println(); 
+ System.out.println("YOU HAVE ENTERED A WRONG CHOICE");
+}
+
+ }
+
+}
